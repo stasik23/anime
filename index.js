@@ -1,7 +1,10 @@
 import express from "express";
 import path from "path"
+import http from "http"
+import fs from "fs"
 
-const dirPath = path.join(__dirname, "data");
+const dataPath = path.join(__dirname, "data")
+const dirPath = path.join(__dirname, "index.html");
 
 console.log(dirPath);
 
