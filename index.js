@@ -1,14 +1,31 @@
 import express from "express";
 import path from "path"
-const dirPath = path.join(__dirname, '/index.html');
+
+const dirPath = path.join(__dirname, "data");
 
 console.log(dirPath);
 
 const app = express();
 const router = express.Router();
 
+const server = http.createServer((req,res) =>{
+
+})
+
+function getAllJokes(req,res){
+  let dir = fs.readdirSync(dirPath);
+  let allJokes = []
+  for(let i = 1;i < dir.length; i++){
+    let file = fs.readdirSync(path.join(dirPath, i + '.json'))
+    let jokeJson= Buffer.from(file).toString();
+    let joker = JSON.parse(jokeJson);
+    joker.id = i;
+    allJokes.push(joker)
+  }
+}
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'SkibidiServer', 'index.html'));
+    res.sendFile(path.join(dirPath, 'index.html'));
   });
 
 app.listen(3000, () => {
@@ -16,29 +33,3 @@ app.listen(3000, () => {
 });
 
 export default router
-
-// import express from "express";
-// import { fileURLToPath } from 'url';
-// import path from 'path';
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname();
-
-// const app = express();
-
-// app.use(express.static(path.join(__dirname, 'SkibidiServer')));
-
-// app.get('/', (req, res) => {
-//     const indexPath = path.join(__dirname, 'SkibidiServer', 'index.html');
-//     res.sendFile(indexPath);
-// });
-
-// app.use('/api', (req, res) => {
-//     res.send('API is working!');
-// });
-
-// const port = 3000;
-
-// app.listen(port, () => {
-//     console.log(`Server is running on port ${port}`);
-// });
