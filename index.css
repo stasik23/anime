@@ -1,0 +1,105 @@
+/* body */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url("images/1000_F_146081595_WthiHSrCrzZqfX3f8NH15TXmnMOrc3By.jpg");
+    background-size: cover;
+}
+
+main header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px;
+    margin-top: 100px;
+    height: 120px;
+    width: 80%;
+    background: darkcyan;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+/* main */
+.container {
+    padding: 20px;
+    overflow: hidden;
+    width: 80%;
+    height: 63vh;
+    margin: 0 auto;
+    background: cyan;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 4px solid black;
+}
+
+.salad {
+    overflow-y: auto;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-sizing: border-box;
+}
+
+.salad{
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border:5px solid black;
+    gap: 5px;
+}
+
+.joke{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px; /* Добавлено для отступа между заголовком и шуткой */
+}
+
+h2{
+    font-size: medium;
+}
+
+.joke{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+/* button */
+button{
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.buttons {
+    margin-top: 10px; /* Добавлено для отступа между заголовком и кнопками */
+    display: flex;
+    justify-content: space-between;
+}
+
+button:hover{
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+}
